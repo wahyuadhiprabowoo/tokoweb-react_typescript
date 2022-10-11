@@ -76,104 +76,107 @@ function DetailProduct() {
 
   return (
     <Container>
-      <div className="fullheight">
-        <div className="my-8">
+      <div className="">
+        <div className="my-8 py-36">
           {isLoading ? (
             <div className="w-full h-screen py-32 mx-auto text-center">
               <CircularProgress color="secondary" size={96} />
             </div>
           ) : (
-            <div className="py-8 mx-auto my-4 border-2 card lg:card-side bg-base-100 md:my-8 lg:my-12">
-              <figure>
-                <img
-                  src={require("../assets/logo/icon-oren.png")}
-                  alt="Item"
-                  width={500}
-                />
-              </figure>
-              <div className="card-body">
-                <p className="mb-2">
-                  Kategori:{" "}
-                  <span className="badge badge-primary badge-outline">
-                    {detail?.data?.data?.category}
-                  </span>
-                </p>
-                <h2 className="card-title">{detail?.data?.data?.name}</h2>
-                <h3 className="text-2xl font-bold">
-                  {formatCurrency(Number(detail?.data?.data?.price))}
-                </h3>
-                <p>Sku: {detail?.data?.data?.sku}</p>
-                <p>{detail?.data?.data?.description}</p>
-
-                {/* Input Button Quantity */}
-                <div className="">
-                  <Button onClick={handleDecrement}>
-                    <FaMinus />
-                  </Button>
-                  <input
-                    pattern="\d+"
-                    type="number"
-                    placeholder=""
-                    min={1}
-                    max={detail?.data?.data?.stock}
-                    className="w-16 input input-bordered"
-                    value={qty}
-                    onChange={handleChange}
+            <Container>
+              <div className="py-8 mx-auto my-4 border-2 card lg:card-side bg-base-100 md:my-8 lg:my-12">
+                <figure>
+                  <img
+                    src={require("../assets/logo/icon-oren.png")}
+                    alt="Item"
+                    width={500}
                   />
-                  <Button onClick={handleIncrement}>
-                    <FaPlus />
-                  </Button>
-                  {/* Stok barang */}
-                  <p className="flex inline-flex mx-2 text-sm opacity-50">
-                    tersisa {"" + detail?.data && detail?.data?.data?.stock}{" "}
-                    buah
+                </figure>
+                <div className="card-body">
+                  <p className="mb-2">
+                    Kategori:{" "}
+                    <span className="badge badge-primary badge-outline">
+                      {detail?.data?.data?.category}
+                    </span>
                   </p>
-                </div>
-                <div>
-                  {/* pesan apabila quantity barang lebih dari stock */}
-                  {Number(qty) >
-                    Number(detail && detail?.data?.data?.stock) && (
-                    <h3 className="my-2 font-bold text-end text-rose-500">
-                      Jumlah pesanan melebihi stok
-                    </h3>
-                  )}
-                </div>
-                <div className="justify-end py-2 card-actions">
-                  {Number(qty) === 0 ||
-                  Number(qty) > Number(detail && detail?.data?.data?.stock) ? (
-                    <>
-                      <button
-                        className="btn btn-disabled text-cyan-500 btn-info btn-xs sm:btn-sm lg:btn-md"
-                        onClick={() => handleClickedAdd()}
-                      >
-                        Tambah Keranjang
-                      </button>
-                      <button
-                        className="btn btn-disabled btn-outline btn-info btn-xs sm:btn-sm lg:btn-md text-base-300"
-                        onClick={handleRedirectWa}
-                      >
-                        Beli Sekarang
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <button
-                        className=" btn btn-info btn-sm sm:btn-sm lg:btn-md text-base-100"
-                        onClick={() => handleClickedAdd()}
-                      >
-                        Tambah Keranjang
-                      </button>
-                      <button
-                        className="btn btn-outline btn-info btn-sm sm:btn-sm lg:btn-md text-base-300"
-                        onClick={handleRedirectWa}
-                      >
-                        Beli Sekarang
-                      </button>
-                    </>
-                  )}
+                  <h2 className="card-title">{detail?.data?.data?.name}</h2>
+                  <h3 className="text-2xl font-bold">
+                    {formatCurrency(Number(detail?.data?.data?.price))}
+                  </h3>
+                  <p>Sku: {detail?.data?.data?.sku}</p>
+                  <p>{detail?.data?.data?.description}</p>
+
+                  {/* Input Button Quantity */}
+                  <div className="">
+                    <Button onClick={handleDecrement}>
+                      <FaMinus />
+                    </Button>
+                    <input
+                      pattern="\d+"
+                      type="number"
+                      placeholder=""
+                      min={1}
+                      max={detail?.data?.data?.stock}
+                      className="w-16 input input-bordered"
+                      value={qty}
+                      onChange={handleChange}
+                    />
+                    <Button onClick={handleIncrement}>
+                      <FaPlus />
+                    </Button>
+                    {/* Stok barang */}
+                    <p className="flex inline-flex mx-2 text-sm opacity-50">
+                      tersisa {"" + detail?.data && detail?.data?.data?.stock}{" "}
+                      buah
+                    </p>
+                  </div>
+                  <div>
+                    {/* pesan apabila quantity barang lebih dari stock */}
+                    {Number(qty) >
+                      Number(detail && detail?.data?.data?.stock) && (
+                      <h3 className="my-2 font-bold text-end text-rose-500">
+                        Jumlah pesanan melebihi stok
+                      </h3>
+                    )}
+                  </div>
+                  <div className="justify-end py-2 card-actions">
+                    {Number(qty) === 0 ||
+                    Number(qty) >
+                      Number(detail && detail?.data?.data?.stock) ? (
+                      <>
+                        <button
+                          className="btn btn-disabled text-cyan-500 btn-info btn-xs sm:btn-sm lg:btn-md"
+                          onClick={() => handleClickedAdd()}
+                        >
+                          Tambah Keranjang
+                        </button>
+                        <button
+                          className="btn btn-disabled btn-outline btn-info btn-xs sm:btn-sm lg:btn-md text-base-300"
+                          onClick={handleRedirectWa}
+                        >
+                          Beli Sekarang
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className=" btn btn-info btn-sm sm:btn-sm lg:btn-md text-base-100"
+                          onClick={() => handleClickedAdd()}
+                        >
+                          Tambah Keranjang
+                        </button>
+                        <button
+                          className="btn btn-outline btn-info btn-sm sm:btn-sm lg:btn-md text-base-300"
+                          onClick={handleRedirectWa}
+                        >
+                          Beli Sekarang
+                        </button>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Container>
           )}
         </div>
       </div>
