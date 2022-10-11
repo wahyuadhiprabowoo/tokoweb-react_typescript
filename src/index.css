@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* Global */
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.carousel .slide img {
+  max-height: 486px; /* change this to whatever you want*/
+  /* height: auto; */
+  object-fit: fill;
+}
+.center-mx {
+  margin: 0px auto;
+}
+.fullheight {
+  height: 100vh;
+}
+.margin_sm {
+  margin: 10px;
+}
+.margin_md {
+  margin: 15px;
+}
+.margin_lg {
+  margin: 20px;
+}
+.margin_xl {
+  margin: 25px;
+}
+.margin_right {
+  margin-right: 10px;
+}
+.padding_sm {
+  padding: 10px;
+}
+.padding_md {
+  padding: 15px;
+}
+.padding_lg {
+  padding: 20px;
+}
+.padding_xl {
+  padding: 25px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+.right {
+  float: right;
+}
+img {
+  object-fit: ;
+}
+/* Header */
+.header {
+  width: 100%;
+  background-color: #d4f6cc;
+  padding: 20px;
+  display: inline-flex;
+}
+.logo-header {
+  margin: 10px;
+  font-size: 24px;
+}
+/* Navbar */
+.topmenu {
+  font-weight: 700;
+  font-size: 24px;
+  padding-right: 20px;
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 15px;
+}
+.topmenu li a {
+  padding: 0 5px;
+  text-align: center;
+  padding-right: 20px;
+}
+
+/* Header End */
+
+/* Home Start */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
