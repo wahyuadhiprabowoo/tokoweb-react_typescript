@@ -75,15 +75,15 @@ function DetailProduct() {
   };
 
   return (
-    <div className="fullheight">
-      <Container>
+    <Container>
+      <div className="fullheight">
         <div className="my-8">
           {isLoading ? (
             <div className="w-full h-screen py-32 mx-auto text-center">
               <CircularProgress color="secondary" size={96} />
             </div>
           ) : (
-            <div className="w-full py-8 mx-auto my-12 border-2 card lg:card-side bg-base-100">
+            <div className="py-8 mx-auto my-4 border-2 card lg:card-side bg-base-100 md:my-8 lg:my-12">
               <figure>
                 <img
                   src={require("../assets/logo/icon-oren.png")}
@@ -176,8 +176,8 @@ function DetailProduct() {
             </div>
           )}
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 }
 

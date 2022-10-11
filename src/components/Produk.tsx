@@ -141,9 +141,9 @@ function Produk() {
                 ))}
               </Grid>
             ) : (
-              <div className="mx-auto my-24 text-base border-2 card card-normal w-96 md:108 bg-base-100">
+              <div className="mx-auto my-24 text-base border-2 card card-normal w-72 md:108 bg-base-100">
                 <div className="card-body">
-                  <h2 className="mx-auto font-bold card-title">
+                  <h2 className="mx-auto font-bold text-center card-title">
                     Produk Tidak Ditemukan
                   </h2>
                 </div>
