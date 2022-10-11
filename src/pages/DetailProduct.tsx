@@ -76,7 +76,7 @@ function DetailProduct() {
 
   return (
     <Container>
-      <div className="">
+      <div className="fullheight">
         <div className="my-8 py-36">
           {isLoading ? (
             <div className="w-full h-screen py-32 mx-auto text-center">
