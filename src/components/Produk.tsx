@@ -67,7 +67,7 @@ function Produk() {
 
   return (
     <Container>
-      <div className="my-12">
+      <div className="my-12 fullheight">
         <div className="">
           <div className="my-8 text-end">
             <input

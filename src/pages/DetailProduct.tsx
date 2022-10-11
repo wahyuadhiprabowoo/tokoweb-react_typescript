@@ -14,7 +14,7 @@ import { formatCurrency } from "../utilities/formatCurrency";
 function DetailProduct() {
   const { id } = useParams();
   const isFetching = useIsFetching();
-  const { handleAddToCart, qty, setQty, cartItems } = UseShoppingCart();
+  const { handleAddToCart, qty, setQty } = UseShoppingCart();
 
   const fetchToko = () => {
     return axios.get(`${baseURL}api/setting`);
@@ -83,7 +83,7 @@ function DetailProduct() {
               <CircularProgress color="secondary" size={96} />
             </div>
           ) : (
-            <div className="w-full mx-auto my-12 border-2 card lg:card-side bg-base-100">
+            <div className="w-full py-8 mx-auto my-12 border-2 card lg:card-side bg-base-100">
               <figure>
                 <img
                   src={require("../assets/logo/icon-oren.png")}
