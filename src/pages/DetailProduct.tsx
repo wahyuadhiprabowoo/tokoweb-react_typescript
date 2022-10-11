@@ -84,7 +84,7 @@ function DetailProduct() {
             </div>
           ) : (
             <Container>
-              <div className="fullheight">
+              <div className="">
                 <div className="py-8 mx-auto my-4 border-2 card lg:card-side bg-base-100 md:my-8 lg:my-12">
                   <figure>
                     <img

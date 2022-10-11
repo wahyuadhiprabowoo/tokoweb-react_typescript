@@ -67,7 +67,7 @@ function Produk() {
 
   return (
     <Container>
-      <div className="my-12 fullheight">
+      <div className="my-12">
         <div className="">
           <div className="my-8 text-end">
             <input
@@ -141,11 +141,13 @@ function Produk() {
                 ))}
               </Grid>
             ) : (
-              <div className="mx-auto my-24 text-base border-2 card card-normal w-72 md:108 bg-base-100">
-                <div className="card-body">
-                  <h2 className="mx-auto font-bold text-center card-title">
-                    Produk Tidak Ditemukan
-                  </h2>
+              <div className="fullheight">
+                <div className="mx-auto my-24 text-base border-2 card card-normal w-72 md:108 bg-base-100">
+                  <div className="card-body">
+                    <h2 className="mx-auto font-bold text-center card-title">
+                      Produk Tidak Ditemukan
+                    </h2>
+                  </div>
                 </div>
               </div>
             )}
