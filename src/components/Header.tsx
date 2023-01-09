@@ -36,7 +36,11 @@ const Header = () => {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <div className="flex items-center">
               <Link to={"/"}>
-                <img src={data?.data?.image} width={50} alt="logo-hylos" />
+                <img
+                  src={require("../assets/logo/hylos.png")}
+                  width={50}
+                  alt="logo-hylos"
+                />
               </Link>
               <Link
                 to={"/"}

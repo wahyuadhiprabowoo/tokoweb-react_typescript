@@ -18,7 +18,7 @@ function Hero() {
         <div className="text-center hero-content">
           <div className="max-w-md">
             <img
-              src={data?.data?.image}
+              src={require("../assets/logo/hylos.png")}
               alt="Logo"
               className="mx-auto sm:w-64 md:w-72 "
               width={240}
